@@ -5,7 +5,7 @@ import oxc from "rollup-plugin-oxc";
 export default {
   input: Object.fromEntries(
     globSync("src/**/*.ts", {
-      exclude: ["**/*.test.*"]
+      exclude: ["**/*.test.*"],
     }).map((path) => {
       return [path.slice(4, -3), path];
     }),
